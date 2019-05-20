@@ -2,17 +2,23 @@
 
 
 @section('content')
+
     <style>
         .carousel-caption {
-            position: absolute;
-            top: 410px;
+            top: 275px;
+            bottom: auto;
+            text-shadow: 0px 0 black, 0 1px black, 1px 0 black, 0 0px black;
+        }
+        img {
+            width: 100%;
+            height: auto;
         }
     </style>
 
     <div class="container">
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"
-             style="height: 550px; overflow-y: hidden;">
+             style="height: 400px; overflow-y: hidden;">
 
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -25,7 +31,7 @@
                     <a href="/manga/{{$manga->mid}}">
                         <img class="d-block w-100" src="/{{$manga->logo}}" alt="First slide">
                     </a>
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-none d-md-block text-light">
                         <h4>{{ucfirst($manga->title)}}</h4>
                         <p>{{$manga->description}}</p>
                     </div>
@@ -35,7 +41,7 @@
                     <a href="/gallery/{{$gallery->gid}}">
                         <img class="d-block w-100" src="/{{$gallery->logo}}" alt="Second slide">
                     </a>
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-none d-md-block text-light">
                         <h4>{{ucfirst($gallery->title)}}</h4>
                         <p>{{$gallery->description}}</p>
                     </div>
