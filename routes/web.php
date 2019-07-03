@@ -17,6 +17,10 @@ Route::get('/about', function () {
     return view('about');
 });
 
+Route::get('/info', function () {
+    return view('info');
+});
+
 Route::get('/dashboard', 'DashboardController@index');
 
 /*

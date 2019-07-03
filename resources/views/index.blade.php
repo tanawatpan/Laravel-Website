@@ -51,7 +51,7 @@
         <div class="flex mt-0" style="justify-content: left;">
 
             <div class="category-card">
-                <a href="" class="non-deco">
+                <a href="/gallery" class="non-deco">
                     <div class="w-100 btn btn-red text-white">
                         <div class="text-center">
                             Gallery
@@ -61,7 +61,7 @@
             </div>
 
             <div class="category-card mb-1">
-                <a href="" class="non-deco">
+                <a href="/manga" class="non-deco">
                     <div class="w-100 btn btn-blue text-white">
                         <div class="text-center">
                             Comic
@@ -103,7 +103,7 @@
             </div>
 
             <div class="category-card mb-1">
-                <a href="" class="non-deco">
+                <a href="/about" class="non-deco">
                     <div class="w-100 btn btn-pink text-white">
                         <div class="text-center">
                             Contact
