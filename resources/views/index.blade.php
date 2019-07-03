@@ -93,7 +93,7 @@
 
 
             <div class="category-card">
-                <a href="" class="non-deco">
+                <a href="/info" class="non-deco">
                     <div class="w-100 btn btn-yellow text-white">
                         <div class="text-center">
                             Commission Info
