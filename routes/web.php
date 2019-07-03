@@ -21,6 +21,14 @@ Route::get('/info', function () {
     return view('info');
 });
 
+Route::get('/game', function () {
+    return view('game');
+});
+
+Route::get('/animation', function () {
+    return view('animation');
+});
+
 Route::get('/dashboard', 'DashboardController@index');
 
 /*

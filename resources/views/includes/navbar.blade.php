@@ -20,8 +20,8 @@
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="/gallery">Gallery</a>
                         <a class="dropdown-item" href="/manga">Manga</a>
-                        <a class="dropdown-item" href="/info">Commission</a>
-                        <a class="dropdown-item" href="/about">Contact</a>
+                        <a class="dropdown-item" href="/animation">Animation</a>
+                        <a class="dropdown-item" href="/game">Game</a>
                     </div>
                 </li>
                 <li class="nav-item">
