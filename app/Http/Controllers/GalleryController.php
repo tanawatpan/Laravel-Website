@@ -86,6 +86,23 @@ class GalleryController extends Controller
         return redirect('/gallery')->with('success', 'Upload Successful');
     }
 
+    function sortCards($collection){
+        return $collection->sort(function($a, $b){
+            $lengthA = strlen($a);
+            $lengthB = strlen($b);
+            $tempA = explode('/',$a);
+            $tempB = explode('/',$b);
+            $valueA = end($tempA)[0];
+            $valueB = end($tempB)[0];
+
+            if($lengthA == $lengthB){
+                if($valueA == $valueB) return 0;
+                return $valueA > $valueB ? 1 : -1;
+            }
+            return $lengthA > $lengthB ? 1 : -1;
+        });
+    }
+
     /**
      * Display the specified resource.
      *
@@ -103,7 +120,7 @@ class GalleryController extends Controller
 
         return view('gallery.show')->with(array(
             'root' => $root,
-            'files' => $files
+            'files' => $this->sortCards(collect($files))
         ));
     }
 
