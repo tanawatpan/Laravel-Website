@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Chapter;
 use App\Manga;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Storage;
 
 class ChapterController extends Controller
@@ -105,18 +106,23 @@ class ChapterController extends Controller
      */
     public function show($mid ,$cid)
     {
-        // Get a gallery
+        // Get a chapter
         $chapter = Chapter::find($cid);
         // Get a Manga
         $manga = Manga::find($mid);
         // Get all files
         $files = Storage::allFiles('public/manga/' . $manga->mid . '/' . $chapter->cid);
+        // sort
+        $sorted_files = array_values(Arr::sort($files, function ($value) {
+            return explode('.',explode('/',$value)[4])[0];
+        }));
+
         // base of path file
         $root = '/storage/manga/' . $manga->mid . '/' . $chapter->cid . '/';
 
         return view('manga.chapter.show')->with(array(
             'root' => $root,
-            'files' => $files,
+            'files' => $sorted_files,
             'chapters' => $manga->chapter,
             'cid' => $chapter->cid,
             'mid' => $manga->mid
