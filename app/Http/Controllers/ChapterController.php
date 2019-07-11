@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use App\Chapter;
 use App\Manga;
 use Illuminate\Http\Request;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Arr;
 
 class ChapterController extends Controller
 {
@@ -98,6 +98,21 @@ class ChapterController extends Controller
         ));
     }
 
+    function sortCards($collection){
+        return $collection->sort(function($a, $b){
+            $lengthA = strlen($a);
+            $lengthB = strlen($b);
+            $valueA = explode('.',explode('/',$a)[4])[0];
+            $valueB = explode('.',explode('/',$b)[4])[0];
+
+            if($lengthA == $lengthB){
+                if($valueA == $valueB) return 0;
+                return $valueA > $valueB ? 1 : -1;
+            }
+            return $lengthA > $lengthB ? 1 : -1;
+        });
+    }
+
     /**
      * Display the specified resource.
      *
@@ -112,17 +127,13 @@ class ChapterController extends Controller
         $manga = Manga::find($mid);
         // Get all files
         $files = Storage::allFiles('public/manga/' . $manga->mid . '/' . $chapter->cid);
-        // sort
-        $sorted_files = array_values(Arr::sort($files, function ($value) {
-            return explode('.',explode('/',$value)[4])[0];
-        }));
 
         // base of path file
         $root = '/storage/manga/' . $manga->mid . '/' . $chapter->cid . '/';
 
         return view('manga.chapter.show')->with(array(
             'root' => $root,
-            'files' => $sorted_files,
+            'files' => $this->sortCards(collect($files)),
             'chapters' => $manga->chapter,
             'cid' => $chapter->cid,
             'mid' => $manga->mid
