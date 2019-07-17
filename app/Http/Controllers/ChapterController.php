@@ -100,6 +100,8 @@ class ChapterController extends Controller
 
     function sortCards($collection){
         return $collection->sort(function($a, $b){
+            $a = strtolower($a);
+            $b = strtolower($b);
             $lengthA = strlen($a);
             $lengthB = strlen($b);
             $valueA = explode('.',explode('/',$a)[4])[0];
