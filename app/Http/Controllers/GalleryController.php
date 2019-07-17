@@ -94,8 +94,8 @@ class GalleryController extends Controller
             $lengthB = strlen($b);
             $tempA = explode('/',$a);
             $tempB = explode('/',$b);
-            $valueA = end($tempA)[0];
-            $valueB = end($tempB)[0];
+            $valueA = end($tempA);
+            $valueB = end($tempB);
 
             if($lengthA == $lengthB){
                 if($valueA == $valueB) return 0;
