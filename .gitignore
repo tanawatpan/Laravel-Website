@@ -15,3 +15,6 @@ vendor/
 .gitattributes
 .editorconfig
 webpack.mix.js
+
+/public
+.idea/workspace.xml
