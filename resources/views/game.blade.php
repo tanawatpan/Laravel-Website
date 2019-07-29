@@ -6,7 +6,7 @@
         <h1 class="display-4">Game</h1>
     </div>
 
-    <div class = "md-12 my-2">
+    <div class = "col-md-12 my-2">
         <img src="/storage/We_are_Escape.jpg">
     </div>
     
