@@ -115,7 +115,9 @@
         </div>
 
     </article>
-
+    <div>
+        Hello. How are you?
+    </div>
     <style>
         .carousel-caption {
             top: 275px;
