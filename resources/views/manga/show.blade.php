@@ -62,7 +62,7 @@
                 @foreach($chapters as $chapter)
                     <hr><div class="row">
                         <div class="col-4"><a href="/manga/{{$manga->mid}}/{{$chapter->cid}}" class="text-primary">CH.{{$chapter->no}}</a></div>
-                        <div class="col-4 font-weight-bold text-muted">{{$chapter->title}}</div>
+                        <div class="col-4 font-weight-bold text-muted"><a href="/manga/{{$manga->mid}}/{{$chapter->cid}}" class="text-primary">{{$chapter->title}}</a></div>
                         <div class="col-4 text-right font-weight-bold text-muted">
                             {{$chapter->updated_at}}
                             @if(!Auth::guest())
