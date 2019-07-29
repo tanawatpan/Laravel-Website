@@ -115,10 +115,15 @@
         </div>
 
     </article>
-    <div class="text-center">
+    <div class="text-center redchar">
         Hello. How are you?
     </div>
     <style>
+        .redchar {
+            color: red;
+            font-size: 22px
+        }
+
         .carousel-caption {
             top: 275px;
             bottom: auto;
