@@ -3,6 +3,10 @@
 
 @section('content')
 
+    <div class="jumbotron text-white text-center font-weight-bold" style = "background-color:#a4c6e0;">
+        <h1 class="display-4">Comics</h1>
+    </div>
+
     <div class="container my-3">
         <div class="row justify-content-center">
             @foreach( $genres as $genre )

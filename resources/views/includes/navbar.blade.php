@@ -11,19 +11,36 @@
             <a class="navbar-brand" href="{{ url('/') }}">
                 Escape
             </a>
+
+
             <ul class="navbar-nav mr-auto">
+
                 <!-- Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Categories
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="/gallery">Gallery</a>
-                        <a class="dropdown-item" href="/manga">Manga</a>
-                        <a class="dropdown-item" href="/animation">Animation</a>
-                        <a class="dropdown-item" href="/game">Game</a>
-                    </div>
+{{--                <li class="nav-item dropdown">--}}
+{{--                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">--}}
+{{--                        Categories--}}
+{{--                    </a>--}}
+{{--                    <div class="dropdown-menu">--}}
+{{--                        <a class="dropdown-item" href="/gallery">Gallery</a>--}}
+{{--                        <a class="dropdown-item" href="/manga">Manga</a>--}}
+{{--                        <a class="dropdown-item" href="/animation">Animation</a>--}}
+{{--                        <a class="dropdown-item" href="/game">Game</a>--}}
+{{--                    </div>--}}
+{{--                </li>--}}
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/gallery">Gallery<span class="sr-only"></span></a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/manga">Comics<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/animation">Animation<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/game">Game<span class="sr-only"></span></a>
+                </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="/info">Commission<span class="sr-only"></span></a>
                 </li>

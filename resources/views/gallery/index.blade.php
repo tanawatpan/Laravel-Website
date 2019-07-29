@@ -3,6 +3,10 @@
 
 @section('content')
 
+    <div class="jumbotron text-white text-center font-weight-bold" style = "background-color:#ce1f44;">
+        <h1 class="display-4">Gallery</h1>
+    </div>
+
     <div class="album py-3 box-content">
 
         <div class="container">
