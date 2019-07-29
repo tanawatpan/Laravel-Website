@@ -60,7 +60,7 @@ class GalleryController extends Controller
         $this->validate($request, [
             'title' => 'required|min:3|max:191|unique:galleries,title',
             'author' => 'required|min:3|max:191',
-            'description' => 'required|max:500',
+            'description' => 'max:500',
             'images' => 'required',
             'images.*' => 'mimes:jpeg,jpg,png'
         ]);

@@ -78,7 +78,7 @@ class MangaController extends Controller
             'title' => 'required|min:3|max:191|unique:mangas,title',
             'author' => 'required|min:3|max:191',
             'genre' => 'required|min:3|max:191',
-            'description' => 'required|max:500',
+            'description' => 'max:500',
             'logo' => 'required|image',
         ]);
 
