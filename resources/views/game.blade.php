@@ -7,7 +7,7 @@
     </div>
 
     <div class="col-md-8 col-md-offset-5 justify-content-center">
-        <img src="/storage/We_are_Escape.jpg" class="img-fluid img-thumbnail" alt="Responsive image"
+        <img src="/storage/We_are_Escape.jpg" class="img-fluid img-thumbnail justify-content-center" alt="Responsive image"
             style="width: 100%;height: auto;">
     </div>
     
