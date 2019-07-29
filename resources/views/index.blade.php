@@ -115,7 +115,7 @@
         </div>
 
     </article>
-    <div>
+    <div class="text-center">
         Hello. How are you?
     </div>
     <style>
