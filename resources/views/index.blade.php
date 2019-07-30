@@ -3,51 +3,134 @@
 
 @section('content')
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"
-         style="height: 400px; overflow-y: hidden;">
+    <section class="hero">
+        <div id="main-highlight" class="highlight-box">
+            <div class="swiper-container swiper-container-horizontal swiper-container-wp8-horizontal">
+                <div class="swiper-wrapper"
+                     style="transform: translate3d(-3420px, 0px, 0px); transition-duration: 0ms;">
 
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        </ol>
+                    <div class="swiper-slide" data-swiper-slide-index="0" style="width: 1140px;">
+                        <article class="highlight-item">
+                            <div class="highlight-item__stat">
+                            </div>
+                            <div class="highlight-item__thumbnail">
+                                <a href="/manga/{{$manga->mid}}" target="_blank"
+                                   title={{ucfirst($manga->title)}} data-event-tracker="HOME"
+                                   data-event-tracker-name="HIGHLIGHT-#1">
+                                    <picture>
+                                        <source srcset="/{{$manga->logo}}"
+                                                media="(min-width: 400px)">
+                                        <img class="lazy-img loading"
+                                             srcset="/{{$manga->logo}}"
+                                             alt={{ucfirst($manga->title)}}
+                                                 data-was-processed="true"
+                                             style="height: 554px; object-fit: cover;">
+                                    </picture>
+                                </a>
+                            </div>
 
-        <div class="carousel-inner col-md-12">
+                            <div class="highlight-item__body">
+                                <h3 class="highlight-item__title">
+                                    <a href="/manga/{{$manga->mid}}" target="_blank"
+                                       data-event-tracker="HOME"
+                                       data-event-tracker-name="HIGHLIGHT-#1">{{ucfirst($manga->title)}}</a>
+                                </h3>
+                                <p class="highlight-item__desc"><a
+                                        href="https://www.online-station.net/mobile-game/view/140611" target="_blank"
+                                        data-event-tracker="HOME"
+                                        data-event-tracker-name="HIGHLIGHT-#3-SPONSOR">{{ucfirst($manga->description)}}</a>
+                                </p>
+                                <div class="highlight-item__viewmore">
+                                    <a href="/manga/{{$manga->mid}}"
+                                       class="btn btn-sm btn-primary" target="_blank" data-event-tracker="HOME"
+                                       data-event-tracker-name="HIGHLIGHT-#1">&nbsp;View&nbsp;
+                                        <svg class="svg-inline--fa fa-angle-right fa-w-8 ml-1" aria-hidden="true"
+                                             data-prefix="fas" data-icon="angle-right" role="img"
+                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg="">
+                                            <path fill="currentColor"
+                                                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path>
+                                        </svg><!-- <i class="fas fa-angle-right ml-1"></i> -->
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
 
-            <div class="carousel-item active">
-                <a href="/manga/{{$manga->mid}}">
-                    <img class="d-block w-100" src="/{{$manga->logo}}" alt="First slide">
-                </a>
-                <div class="carousel-caption d-none d-md-block text-light">
-                    <h4>{{ucfirst($manga->title)}}</h4>
-                    <p>{{$manga->description}}</p>
+                    <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="2" style="width: 1140px;">
+                        <article class="highlight-item">
+                            <div class="highlight-item__stat">
+                            </div>
+                            <div class="highlight-item__thumbnail">
+                                <a href="/gallery/{{$gallery->gid}}" target="_blank"
+                                   title={{ucfirst($gallery->title)}}
+                                       data-event-tracker="HOME" data-event-tracker-name="HIGHLIGHT-#3-SPONSOR">
+                                    <picture>
+                                        <source srcset="/{{$gallery->logo}}"
+                                                media="(min-width: 400px)">
+                                        <img class="lazy-img loading"
+                                             srcset="/{{$gallery->logo}}"
+                                             alt={{ucfirst($gallery->title)}}
+                                                 data-was-processed="true"
+                                             style="height: 554px; object-fit: cover;">
+                                    </picture>
+                                </a>
+                            </div>
+
+                            <div class="highlight-item__body">
+                                <h3 class="highlight-item__title">
+                                    <a href="/gallery/{{$gallery->gid}}" target="_blank"
+                                       data-event-tracker="HOME"
+                                       data-event-tracker-name="HIGHLIGHT-#3-SPONSOR">{{ucfirst($gallery->title)}}</a>
+                                </h3>
+                                <p class="highlight-item__desc"><a
+                                        href="https://www.online-station.net/mobile-game/view/140611" target="_blank"
+                                        data-event-tracker="HOME"
+                                        data-event-tracker-name="HIGHLIGHT-#3-SPONSOR">{{ucfirst($gallery->description)}}</a>
+                                </p>
+                                <div class="highlight-item__viewmore">
+                                    <a href="/gallery/{{$gallery->gid}}"
+                                       class="btn btn-sm btn-primary" target="_blank" data-event-tracker="HOME"
+                                       data-event-tracker-name="HIGHLIGHT-#3-SPONSOR">&nbsp;View&nbsp;
+                                        <svg class="svg-inline--fa fa-angle-right fa-w-8 ml-1" aria-hidden="true"
+                                             data-prefix="fas" data-icon="angle-right" role="img"
+                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg="">
+                                            <path fill="currentColor"
+                                                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path>
+                                        </svg><!-- <i class="fas fa-angle-right ml-1"></i> -->
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
                 </div>
+
+                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span
+                        class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span
+                        class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span
+                        class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
             </div>
 
-            <div class="carousel-item">
-                <a href="/gallery/{{$gallery->gid}}">
-                    <img class="d-block w-100" src="/{{$gallery->logo}}" alt="Second slide">
-                </a>
-                <div class="carousel-caption d-none d-md-block text-light">
-                    <h4>{{ucfirst($gallery->title)}}</h4>
-                    <p>{{$gallery->description}}</p>
-                </div>
+            <div class="swiper-button-prev">
+                <svg class="svg-inline--fa fa-angle-left fa-w-8" aria-hidden="true" data-prefix="fas"
+                     data-icon="angle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"
+                     data-fa-i2svg="">
+                    <path fill="currentColor"
+                          d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path>
+                </svg><!-- <i class="fas fa-angle-left"></i> -->
             </div>
-
+            <div class="swiper-button-next">
+                <svg class="svg-inline--fa fa-angle-right fa-w-8" aria-hidden="true" data-prefix="fas"
+                     data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"
+                     data-fa-i2svg="">
+                    <path fill="currentColor"
+                          d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path>
+                </svg><!-- <i class="fas fa-angle-right"></i> -->
+            </div>
         </div>
 
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
+    </section>
 
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-
-    </div>
-
-    <article class="my-3">
+    <article class="my-4">
         <div class="flex mt-0" style="justify-content: left;">
 
             <div class="category-card">
@@ -96,7 +179,7 @@
                 <a href="/info" class="non-deco">
                     <div class="w-100 btn btn-yellow text-white">
                         <div class="text-center">
-                            Commission Info
+                            Commission
                         </div>
                     </div>
                 </a>
@@ -115,9 +198,670 @@
         </div>
 
     </article>
-    <div>
-        Hello. How are you?
-    </div>
+
+
+    <style>
+        /*Online Station*/
+        *, ::after, ::before {
+            box-sizing: border-box
+        }
+
+        img {
+            vertical-align: middle;
+            border-style: none
+        }
+
+        a {
+            color: #343a40;
+            text-decoration: none;
+            background-color: transparent;
+            -webkit-text-decoration-skip: objects
+        }
+
+        a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+            color: inherit;
+            text-decoration: none
+        }
+
+        a:not([href]):not([tabindex]):focus {
+            outline: 0
+        }
+
+        .btn {
+            display: inline-block;
+            font-weight: 400;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid transparent;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: 0;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
+        }
+
+        a.btn.disabled, fieldset:disabled a.btn {
+            pointer-events: none
+        }
+
+        .btn-group-vertical > .btn, .btn-group > .btn {
+            position: relative;
+            flex: 0 1 auto
+        }
+
+        .btn-group-toggle > .btn input[type=checkbox], .btn-group-toggle > .btn input[type=radio], .btn-group-toggle > .btn-group > .btn input[type=checkbox], .btn-group-toggle > .btn-group > .btn input[type=radio] {
+            position: absolute;
+            clip: rect(0, 0, 0, 0);
+            pointer-events: none
+        }
+
+        .input-group-append .btn, .input-group-prepend .btn {
+            position: relative;
+            z-index: 2
+        }
+
+        .back2top-box .btn {
+            width: 50px !important;
+            height: 50px !important
+        }
+
+        .btn-group-sm > .btn, .btn-sm {
+            padding: .25rem .5rem;
+            font-size: .875rem;
+            line-height: 1.5;
+            border-radius: 0
+        }
+
+        .btn-primary.focus, .btn-primary:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show > .btn-primary.dropdown-toggle:focus {
+            box-shadow: 0 0 0 .2rem rgb(9, 0, 255)
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: #5455f3;
+            border-color: #5455f3
+        }
+
+        .btn-primary:hover {
+            color: #fff;
+            background-color: #5b8ef3;
+            border-color: #5b8ef3
+        }
+
+        .btn-primary.disabled, .btn-primary:disabled {
+            color: #fff;
+            background-color: #5455f3;
+            border-color: #5455f3
+        }
+
+        .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+            color: #fff;
+            background-color: #5b8ef3;
+            border-color: #5b8ef3
+        }
+
+        .hero {
+            position: relative;
+            z-index: 5;
+            margin: auto
+        }
+
+        @media (min-width: 576px) {
+            .hero {
+                max-width: 540px
+            }
+        }
+
+        @media (min-width: 768px) {
+            .hero {
+                max-width: 720px
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .hero {
+                max-width: 980px
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .hero {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                padding-bottom: 1rem
+            }
+        }
+
+        .hero__header h1 {
+            color: #fff;
+            margin-bottom: 0
+        }
+
+        .highlight-box {
+            position: relative;
+            background: #fff;
+            margin-bottom: 0
+        }
+
+        .highlight-item {
+            position: relative;
+            display: flex;
+            padding-bottom: 0
+        }
+
+        .highlight-item__thumbnail {
+            width: 100%
+        }
+
+        @media (min-width: 1200px) {
+            .highlight-item__thumbnail {
+                width: 700px;
+                min-width: 700px
+            }
+        }
+
+        @media (min-width: 1600px) {
+            .hero {
+                max-width: 1140px
+            }
+
+            .highlight-item__thumbnail {
+                width: 840px;
+                min-width: 840px
+            }
+        }
+
+        .highlight-item__thumbnail a {
+            display: block;
+            width: 100%
+        }
+
+        .highlight-item__stat {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 25px;
+            height: 25px
+        }
+
+        .highlight-item__body {
+            position: absolute;
+            bottom: 0;
+            z-index: 1;
+            color: #fff;
+            width: 100%;
+            padding: 1rem
+        }
+
+        .highlight-item__title {
+            font-size: 1.125rem;
+            line-height: 1.5rem;
+            text-align: center;
+            margin-bottom: 0
+        }
+
+        .highlight-item__title a {
+            color: #fff
+        }
+
+        .highlight-item__title a:focus, .highlight-item__title a:hover {
+            color: #5b8ef3;
+            text-decoration: none
+        }
+
+        @media (min-width: 768px) {
+            .highlight-item__title {
+                font-size: 1.5rem;
+                line-height: 2rem
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .highlight-item__body {
+                background-color: #34393d;
+                position: relative;
+                padding: 1.5rem
+            }
+
+            .highlight-item__title {
+                text-align: left;
+                margin-bottom: .75rem
+            }
+        }
+
+        .highlight-item__desc {
+            display: none;
+            font-weight: 500;
+            margin-bottom: 0
+        }
+
+        .highlight-item__desc a {
+            color: #adb5bd
+        }
+
+        .highlight-item__desc a:focus, .highlight-item__desc a:hover {
+            color: #adb5bd;
+            text-decoration: none
+        }
+
+        .highlight-item__desc a, .highlight-item__desc p, .highlight-item__title a {
+            display: block;
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical
+        }
+
+        .highlight-item__title a {
+            max-height: 100px;
+            -webkit-line-clamp: 3
+        }
+
+        .highlight-item__desc a, .highlight-item__desc p {
+            max-height: 120px;
+            -webkit-line-clamp: 5
+        }
+
+        @media (min-width: 1200px) {
+            .highlight-item__desc {
+                display: inline-block
+            }
+        }
+
+        .highlight-item__viewmore {
+            display: none
+        }
+
+        @media (min-width: 1200px) {
+            .highlight-item__viewmore {
+                display: block;
+                position: absolute;
+                bottom: 55px;
+                right: 1.5rem
+            }
+        }
+
+        .swiper-container, .swiper-slide, .swiper-wrapper {
+            position: relative
+        }
+
+        .swiper-container {
+            margin: 0 auto;
+            overflow: hidden;
+            list-style: none;
+            padding: 0;
+            z-index: 1
+        }
+
+        .swiper-container-no-flexbox .swiper-slide {
+            float: left
+        }
+
+        .swiper-container-vertical > .swiper-wrapper {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column
+        }
+
+        .swiper-wrapper {
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-transition-property: -webkit-transform;
+            -o-transition-property: transform;
+            transition-property: transform;
+            transition-property: transform, -webkit-transform;
+            -webkit-box-sizing: content-box;
+            box-sizing: content-box
+        }
+
+        .swiper-container-android .swiper-slide, .swiper-wrapper {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0)
+        }
+
+        .swiper-container-multirow > .swiper-wrapper {
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap
+        }
+
+        .swiper-container-free-mode > .swiper-wrapper {
+            -webkit-transition-timing-function: ease-out;
+            -o-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+            margin: 0 auto
+        }
+
+        .swiper-slide {
+            -webkit-flex-shrink: 0;
+            -ms-flex-negative: 0;
+            flex-shrink: 0;
+            width: 100%;
+            -webkit-transition-property: -webkit-transform;
+            -o-transition-property: transform;
+            transition-property: transform;
+            transition-property: transform, -webkit-transform
+        }
+
+        .swiper-container-autoheight .swiper-wrapper {
+            -webkit-box-align: start;
+            -webkit-align-items: flex-start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            -webkit-transition-property: height, -webkit-transform;
+            -o-transition-property: transform, height;
+            transition-property: transform, height;
+            transition-property: transform, height, -webkit-transform
+        }
+
+        .swiper-container-wp8-horizontal, .swiper-container-wp8-horizontal > .swiper-wrapper {
+            -ms-touch-action: pan-y;
+            touch-action: pan-y
+        }
+
+        .swiper-button-next, .swiper-button-prev {
+            position: absolute;
+            top: 50%;
+            width: 27px;
+            height: 44px;
+            margin-top: -22px;
+            z-index: 10;
+            cursor: pointer;
+            background-size: 27px 44px;
+            background-position: center;
+            background-repeat: no-repeat
+        }
+
+        .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+            left: 10px;
+            right: auto
+        }
+
+        .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+            right: 10px;
+            left: auto
+        }
+
+        .swiper-pagination {
+            position: absolute;
+            text-align: center;
+            -webkit-transition: .3s opacity;
+            -o-transition: .3s opacity;
+            transition: .3s opacity;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+            z-index: 10
+        }
+
+        .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+            -webkit-transform: scale(.33);
+            -ms-transform: scale(.33);
+            transform: scale(.33);
+            position: relative
+        }
+
+        .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1)
+        }
+
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            display: inline-block;
+            border-radius: 100%;
+            background: #ccc
+        }
+
+        button.swiper-pagination-bullet {
+            border: none;
+            margin: 0;
+            padding: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none
+        }
+
+        .swiper-pagination-clickable .swiper-pagination-bullet {
+            cursor: pointer
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: #5455f3
+        }
+
+        .swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+            margin: 6px 0;
+            display: block
+        }
+
+        .swiper-container-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+            display: inline-block;
+            -webkit-transition: .2s top, .2s -webkit-transform;
+            -o-transition: .2s transform, .2s top;
+            transition: .2s transform, .2s top;
+            transition: .2s transform, .2s top, .2s -webkit-transform
+        }
+
+        .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+            margin: 0 3px
+        }
+
+        .swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+            -webkit-transition: .2s left, .2s -webkit-transform;
+            -o-transition: .2s transform, .2s left;
+            transition: .2s transform, .2s left;
+            transition: .2s transform, .2s left, .2s -webkit-transform
+        }
+
+        .swiper-container-horizontal.swiper-container-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+            -webkit-transition: .2s right, .2s -webkit-transform;
+            -o-transition: .2s transform, .2s right;
+            transition: .2s transform, .2s right;
+            transition: .2s transform, .2s right, .2s -webkit-transform
+        }
+
+
+        .swiper-pagination-white .swiper-pagination-bullet-active {
+            background: #fff
+        }
+
+        .swiper-zoom-container > canvas, .swiper-zoom-container > img, .swiper-zoom-container > svg {
+            max-width: 100%;
+            max-height: 100%;
+            -o-object-fit: contain;
+            object-fit: contain
+        }
+
+        @-webkit-keyframes swiper-preloader-spin {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes swiper-preloader-spin {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg)
+            }
+        }
+
+        .swiper-container-fade.swiper-container-free-mode .swiper-slide {
+            -webkit-transition-timing-function: ease-out;
+            -o-transition-timing-function: ease-out;
+            transition-timing-function: ease-out
+        }
+
+        .swiper-container-fade .swiper-slide {
+            pointer-events: none;
+            -webkit-transition-property: opacity;
+            -o-transition-property: opacity;
+            transition-property: opacity
+        }
+
+        .swiper-container-fade .swiper-slide .swiper-slide {
+            pointer-events: none
+        }
+
+        .swiper-container-cube .swiper-slide {
+            pointer-events: none;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            z-index: 1;
+            visibility: hidden;
+            -webkit-transform-origin: 0 0;
+            -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+            width: 100%;
+            height: 100%
+        }
+
+        .swiper-container-cube .swiper-slide .swiper-slide {
+            pointer-events: none
+        }
+
+        .swiper-container-cube.swiper-container-rtl .swiper-slide {
+            -webkit-transform-origin: 100% 0;
+            -ms-transform-origin: 100% 0;
+            transform-origin: 100% 0
+        }
+
+        .swiper-container-flip .swiper-slide {
+            pointer-events: none;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            z-index: 1
+        }
+
+        .swiper-container-flip .swiper-slide .swiper-slide {
+            pointer-events: none
+        }
+
+        .swiper-container-coverflow .swiper-wrapper {
+            -ms-perspective: 1200px
+        }
+
+        .swiper--auto-height .swiper-slide {
+            display: flex;
+            min-height: 100%
+        }
+
+        .swiper--pagination .swiper-pagination {
+            display: block
+        }
+
+        .swiper--pagination .swiper-pagination + .swiper-wrapper {
+            padding-bottom: 30px
+        }
+
+        .swiper--pagination-hidden .swiper-pagination {
+            display: none
+        }
+
+        .swiper--pagination-hidden .swiper-pagination + .swiper-wrapper {
+            padding-bottom: 0
+        }
+
+        .swiper--navigation .swiper-button-prev {
+            left: -60px;
+            right: auto
+        }
+
+        .swiper--navigation .swiper-button-next {
+            right: -60px;
+            left: auto
+        }
+
+        .swiper--navigation .swiper-button-next, .swiper--navigation .swiper-button-prev {
+            display: none;
+            position: absolute;
+            font-size: 40px;
+            color: #f36b21;
+            width: 40px;
+            height: 40px;
+            margin-top: -20px
+        }
+
+        .swiper--navigation .swiper-button-next .svg-inline--fa, .swiper--navigation .swiper-button-prev .svg-inline--fa {
+            vertical-align: 0
+        }
+
+        @media (min-width: 1200px) {
+            .swiper--navigation .swiper-button-next, .swiper--navigation .swiper-button-prev {
+                display: block
+            }
+        }
+
+        .highlight-box .swiper-button-next, .highlight-box .swiper-button-prev {
+            display: none;
+            font-size: 50px;
+            color: #fff;
+            height: 50px;
+            margin-top: -25px
+        }
+
+        .highlight-box .swiper-button-next .svg-inline--fa, .highlight-box .swiper-button-prev .svg-inline--fa {
+            vertical-align: 0
+        }
+
+        .player-overlay .svg-inline--fa {
+            vertical-align: top
+        }
+
+
+        @media (min-width: 1200px) {
+            .highlight-box:hover .swiper-button-next, .highlight-box:hover .swiper-button-prev {
+                display: block
+            }
+
+            .highlight-box .swiper-pagination {
+                bottom: 15px;
+                left: auto;
+                right: 15px;
+                text-align: right;
+                width: auto
+            }
+        }
+
+        .entry__thumb img, .highlight-item__thumbnail img {
+            max-width: 100%;
+            height: auto
+        }
+
+        svg:not(:root).svg-inline--fa {
+            overflow: visible
+        }
+
+        .svg-inline--fa {
+            display: inline-block;
+            font-size: inherit;
+            height: 1em;
+            overflow: visible;
+            vertical-align: -.125em
+        }
+
+        .svg-inline--fa.fa-w-8 {
+            width: .5em
+        }
+
+        .ml-1 {
+            margin-left: .25rem !important
+        }
+
+    </style>
+
     <style>
         .carousel-caption {
             top: 275px;
@@ -357,5 +1101,15 @@
             color: #FFF
         }
     </style>
+
+    <script>
+        var HighlightBox = new Swiper("#main-highlight .swiper-container", {
+            slidesPerView: 1,
+            autoplay: {delay: 4500, disableOnInteraction: !1},
+            loop: !0,
+            pagination: {el: "#main-highlight .swiper-pagination", clickable: !0},
+            navigation: {nextEl: "#main-highlight .swiper-button-next", prevEl: "#main-highlight .swiper-button-prev"}
+        });
+    </script>
 
 @endsection
