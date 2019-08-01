@@ -199,6 +199,9 @@
 
     </article>
 
+    <div class="text-center">
+        Hello there.
+    </div>
 
     <style>
         /*Online Station*/
