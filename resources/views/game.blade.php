@@ -11,7 +11,7 @@
         <div class = 'col-md-2'></div>
 
         <div class="col-md-8 col-md-offset-5">
-            <img src="/storage/We_are_Escape.jpg" class="img-fluid img-thumbnail" alt="Responsive image"
+            <img src="/storage/Lyn's art problem underconstruction.jpg" class="img-fluid img-thumbnail" alt="Responsive image"
                 style="width: 100%;height: auto;">
         </div>
 
