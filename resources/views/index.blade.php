@@ -198,9 +198,6 @@
         </div>
 
     </article>
-    <div>
-    Hello world.
-    </div>
 
     <style>
         /*Online Station*/
