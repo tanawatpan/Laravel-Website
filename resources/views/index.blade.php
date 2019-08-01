@@ -199,7 +199,7 @@
 
     </article>
     <div>
-    Hello world.
+    Hello world
     </div>
 
     <style>
