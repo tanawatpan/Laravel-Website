@@ -10,7 +10,7 @@
         <div class = 'col-md-2'></div>
 
         <div class="col-md-8 col-md-offset-5">
-            <img src="/storage/comm_table_2019" class="img-fluid img-thumbnail" alt="Responsive image"
+            <img src="/storage/comm_table_2019.jpg" class="img-fluid img-thumbnail" alt="Responsive image"
             style="width: 100%;height: auto;">
         </div>
 
