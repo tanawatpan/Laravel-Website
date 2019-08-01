@@ -202,6 +202,10 @@
     <div class="text-center">
         Hello there.
     </div>
+    <div class="col-md-8 col-md-offset-5">
+        <img src="/storage/escape1and2 chibi.jpg" class="img-fluid img-thumbnail" alt="Responsive image"
+                style="width: 100%;height: auto;">
+    </div>
 
     <style>
         /*Online Station*/
