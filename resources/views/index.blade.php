@@ -205,7 +205,7 @@
     <div class = 'row'>
         <div class = 'col-md-2'></div>
         <div class="col-md-8 col-md-offset-5">
-            <img src="/storage/escape1and2 chibi.jpg" class="img-fluid img-thumbnail" alt="Responsive image"
+            <img src="/storage/escape1and2 chibi.jpg" class="img-fluid" alt="Responsive image"
                 style="width: 100%;height: auto;">
         </div>
         <div class = 'col-md-2'></div>
