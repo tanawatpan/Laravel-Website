@@ -200,7 +200,7 @@
     </article>
 
     <div class="text-center">
-        Hello there.
+        <h1><b>Hello there.</b></h1>
     </div>
     <div class = 'row'>
         <div class = 'col-md-2'></div>
