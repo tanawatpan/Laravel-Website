@@ -198,8 +198,8 @@
         </div>
 
     </article>
-    <div>
-    Hello world
+    <div class="text-center">
+        Hello world
     </div>
 
     <style>
