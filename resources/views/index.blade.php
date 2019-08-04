@@ -154,7 +154,7 @@
             </div>
 
             <div class="category-card">
-                <a href="" class="non-deco">
+                <a href="/animation" class="non-deco">
                     <div class="w-100 btn btn-brown text-white">
                         <div class="text-center">
                             Animation
@@ -165,7 +165,7 @@
 
 
             <div class="category-card mb-1">
-                <a href="" class="non-deco">
+                <a href="/game" class="non-deco">
                     <div class="w-100 btn btn-cyan text-white">
                         <div class="text-center">
                             Game
