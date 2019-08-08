@@ -115,6 +115,7 @@
 
                     $(".page-selector").val(index + 1);
                     $('#loop .row:eq(' + index + ') ').show();
+                    $("html,body").animate({scrollTop:0},"slow");
                 });
 
                 // Click previous page btn
