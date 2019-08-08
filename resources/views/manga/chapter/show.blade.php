@@ -46,7 +46,7 @@
                 <div class="row">
                     <div class="col-md-12 col-md-offset-5">
                         <img src='{{$root}}{{basename($file)}}' class="img-fluid img-thumbnail" alt="Responsive image"
-                             style="width: 80%;height: auto;">
+                             style="width: 100%;height: auto;">
                     </div>
                 </div>
             @endforeach
